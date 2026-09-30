@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Monster Quest 3D</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game"></div>
+
+  <!-- Title screen -->
+  <div id="title" class="overlay hidden">
+    <div class="title-card">
+      <div class="logo">MONSTER<br><span>QUEST 3D</span></div>
+      <p class="tagline">Catch · Battle · Evolve</p>
+      <button id="new-btn">New Game</button>
+      <button id="continue-btn">Continue</button>
+      <p class="hint">Arrows/WASD move · Space talk · M menu · Shift run</p>
+    </div>
+  </div>
+
+  <!-- Overworld HUD -->
+  <div id="hud" class="hidden">
+    <div id="hud-money" class="chip">₽0</div>
+    <div id="hud-party"></div>
+  </div>
+  <button id="mute-btn" title="Toggle sound">🔊</button>
+
+  <!-- Battle UI -->
+  <div id="battle-ui" class="hidden">
+    <div id="enemy-panel" class="mon-panel">
+      <div class="p-head"><span class="p-name"></span><span class="p-lv"></span></div>
+      <div class="p-types"></div>
+      <div class="bar"><div></div></div>
+    </div>
+    <div id="player-panel" class="mon-panel">
+      <div class="p-head"><span class="p-name"></span><span class="p-lv"></span></div>
+      <div class="p-types"></div>
+      <div class="bar"><div></div></div>
+      <div class="p-hp"></div>
+      <div class="xp"><div></div></div>
+    </div>
+  </div>
+
+  <div id="dialog" class="panel hidden"><div id="dialog-text"></div><div id="dialog-arrow">▼</div></div>
+  <div id="menu" class="panel hidden"></div>
+  <div id="toast"></div>
+  <div id="flash"></div>
+  <div id="wipe"></div>
+
+  <!-- Touch controls -->
+  <div id="touch">
+    <div class="dpad">
+      <button data-key="up" class="up">▲</button>
+      <button data-key="left" class="left">◀</button>
+      <button data-key="right" class="right">▶</button>
+      <button data-key="down" class="down">▼</button>
+    </div>
+    <div class="abtns">
+      <button data-key="menu" class="menu-b">☰</button>
+      <button data-key="b" class="b">B</button>
+      <button data-key="a" class="a">A</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/creature.js"></script>
+  <script src="js/world.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/sound.js"></script>
+  <script src="js/battle.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
